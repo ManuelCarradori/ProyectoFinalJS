@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>La Reina Online - Supermercados La Reina - Verduras</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description"
+        content="La Reina Online. Para comprar con la misma calidad que en nuestras sucursales, pero desde tu casa. Un servicio ágil, cómodo, seguro y muy eficiente.">
+    <meta name="keywords"
+        content="Supermercado, Supermercados, La Reina, Productos, Marcas, Compras, OnLine, E-Commerce, Rosario, Precio, Almacen, Ropa, Comida, Indumentaria, Hiper">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Librerias -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Icon fav -->
+    <link href="../public/images/favicon/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+
+<body>
+    <div>
+        <hr class="barra-separadora">
+    </div>
+    <header id="header-index">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img class="logo__img" src="../public/images/logo/LaReinaLogo.png" alt="Logo Reina">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Carnes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./carnesRojas.html">Carnes Rojas</a></li>
+                                <li><a class="dropdown-item" href="./carnesBlancas.html">Carnes Blancas</a></li>
+                                <li><a class="dropdown-item" href="./carnesCerdo.html">Carnes Cerdo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Frutas y Verduras
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./frutas.html">Frutas Frescas</a></li>
+                                <li><a class="dropdown-item " href="./verduras.html">Verduras Verdes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cuidado Personal
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./ProducAfeitarse.html">Productos Para Afeitarse</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./proteccionFem.html">Proteccion Femenina</a></li>
+                                <li><a class="dropdown-item active" href="./desodoranteAyC.html">Desodorantes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <button id="cesta-carrito"><i class="fas fa-shopping-cart"></i><span
+                        id="contador-carrito">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <hr class="barra-separadora">
+    </div>
+
+    <div class="contenedor">
+        <div class="wrap">
+            <div class="box">
+                <h1 class="transicion">UN REGALO</h1>
+                <p class="transicion">QUE SIEMPRE VIENE BIEN!!</p>
+            </div>
+        </div>
+    </div>
+
+    <main id="producto-contenedor">
+
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+        </div>
+    </div>
+
+    <script src="../stock.js" type="module"></script>
+    <script src="../App.js" type="module"></script>
+    <script src="../carrito.js" type="module"></script>
+    <script src="../modal.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
