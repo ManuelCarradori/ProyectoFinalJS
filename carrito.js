@@ -1,4 +1,4 @@
-import { productos } from "./stock.js";
+import { getData } from './getData.js';
 
 const contadorCarrito = document.getElementById('contador-carrito');
 const precioTotal = document.getElementById('precioTotal');
@@ -8,8 +8,9 @@ const actualizarPreciosCarrito = (carrito) => {
   precioTotal.innerText = carrito.reduce((acc, el) => acc + (el.precio * el.cantidad), 0);
 }
 
-export const agregarAlCarrito = (id) => {
+export const agregarAlCarrito = async (id) => {
   let carrito = JSON.parse(localStorage.getItem("carrito")) ?? [];
+  const productos = await getData();
 
   const producto = productos.find(producto => producto.id === id);
   const productoEnCarrito = carrito.find(producto => producto.id === id);
@@ -25,7 +26,7 @@ export const agregarAlCarrito = (id) => {
 
 export const renderProductosCarrito = () => {
   let carrito = JSON.parse(localStorage.getItem("carrito")) ?? [];
-
+  
   const contenedorCarrito = document.getElementById('carrito-contenedor');
   contenedorCarrito.innerHTML = "";
   carrito.forEach(producto => {
